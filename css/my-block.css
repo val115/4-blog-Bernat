@@ -1,0 +1,137 @@
+html {
+   min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+      display:block;
+}
+/*===============*/
+body {
+   background: transparent;
+   padding: 0;
+   margin: 0;
+   border: 0;
+   outline: 0;   /* обнуляем отступы и убираем бордюры */
+   vertical-align: baseline;
+   font-size: 100%;
+   min-height: 100%;
+}
+.clr{
+   clear:both;
+}
+.clearfix:after {       /*чтобы не происходило схлопавыния границ при float: left;right:  надо назначать этот класс */
+    clear: both;
+    content: "";
+    display: table;
+}
+/*============================*/
+   .width-main {
+      max-width: 600px;
+      margin: 0 auto;
+   }
+
+
+   .block-main1 {
+      background: #fffcdb;
+      height: 300px;
+   }
+   /*---------------------*/
+      .block1  {
+         overflow: hidden;
+         background: #00FF66;
+         height: 200px;
+         margin-top: 20px;
+         /*max-width: 500px;
+         margin: 0 auto;*/
+
+      }
+         .block1-1 {
+            background: #00FFFF;
+            width: 100px;
+            height: 150px;
+            float: left;
+            /*margin-top: 50px;*/ /*выровнял блоки по центру*/
+         }
+
+         .block1-2 {
+            background: #FFFF99;
+            width: 100px;
+            height: 50px;
+            float: right;
+            /*margin-top: -50px; */  /*выровнял блоки по центру*/
+         }
+
+         /*Позиционнирование*/
+      .block1-pos {
+         background: #0066FF;
+         position: relative;
+         width: 30%;
+         height: 60px;
+         left: 330px;
+         top: 100px;
+      }
+         .block1-pos1 {
+            background: #FF00FF;
+            opacity: 0.6;
+            position: absolute;
+            width: 130px;
+            height: 50px;
+            left: 0;
+            top: 5px;
+         }
+         .block1-pos2 {
+            background: #666;
+            opacity: 0.6;
+            position: absolute;
+            width: 35px;
+            height: 20px;
+            left: 90px;
+            top: 20px;
+         }
+   /*--------------------------*/
+   .block-main2 {
+      background: #ccc;
+      height: 250px;
+   }
+      .block2  {
+         overflow: hidden;
+         background: #FFCCCC;
+         height: 200px;
+         margin-top: 10px;
+         /*max-width: 500px;
+         margin: 0 auto;*/
+      }
+         .block2-1 {
+            background: #FF9966;
+            width: 50%;
+            float: left;
+
+               /*для выравнивания колонок по высоте и заполнения всего блока*/
+            padding-bottom: 32000px;
+            margin-bottom: -32000px;
+         }
+         .block2-2 {
+            background: #99CCFF;
+            width: 30%;
+            /*height: 40%*/;
+            float: right;
+
+            /*для выравнивания колонок по высоте и заполнения всего блока*/
+            padding-bottom: 32000px;
+            margin-bottom: -32000px;
+         }
+
+/*-----------------------*/
+      .block3 {
+         background: #99CC99;
+         height: 150px;
+         margin-bottom: 50px;
+      }
+         .block3-1  {
+            background: #FFFF00;
+            height: 100px;
+            /*max-width: 600px;
+            margin: 0 auto;*/
+         }
+
+/*box-sizing: border-box;*/   /* Не нужно задавоть для блока дополнительные свойства - это свойство учитывает margin, padding, border- в ширене бокса  не*/

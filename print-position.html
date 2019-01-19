@@ -1,0 +1,36 @@
+	<div class="vidget">
+         <h2>Stey Tuned</h2>
+        <div class="subscribe"><!-- для позиционирования input-ов -->
+            <form action="" method="get">
+               <input class="sbcr-mail" type="email" placeholder="You Email">
+               <input class="sbcr-btn" type="image" src="images/sbcr-btn.jpg" >
+            </form>
+        </div>
+    </div>
+
+<script>
+	   /*Позиционирование*/
+   .subscribe {
+      position: relative;
+      width: 100%;
+      height: 48px;
+   }
+      .vidget .sbcr-mail {
+         color: #b9b9b9;
+         font-size: 0.75em;
+         width: 100%;
+         box-sizing: border-box;   /* это свойство учитывает margin, padding, border- в ширене бокса */
+         border: 1px solid #e1e0e0;
+         border-right: 0;
+         padding: 15px 50px 15px 20px;
+
+         position: absolute;
+         top: 0;
+         left: 0;
+      }
+      .vidget .sbcr-btn {
+         position: absolute;
+         top: 12px;
+         right: 20px;
+      }
+</script>

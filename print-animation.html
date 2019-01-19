@@ -1,0 +1,88 @@
+<article>
+         <header>
+            <img src="images/img1.jpg" alt="Image-1">
+      <!-- Добавляем заморочку -->
+            <p class='publish'>Pablished Valerii Ivan 03.04.2018</p>
+         </header>
+         <h2>Duis aute irure dolor in henderit in voluptate.</h2>
+
+         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipop ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
+
+         <p><a class="butt" href="">Continue Reading</a> </p>
+      </article>
+
+<style>
+
+      /*Для анимации - появления на картинки блока*/
+         article>header:hover .publish {
+            bottom: 0;
+            display: block;
+
+           /*  -webkit-transition: display 0.8s linear;
+            -o-transition: display 0.8s linear;
+            transition: display 0.8s linear;
+*/
+         }
+         .publish {
+            display: none;
+            font-size: 13px;
+            color: #fff;
+            background: rgba(0,0,0, 0.5);
+
+            position: absolute;
+            bottom:-60px;
+            padding: 10px 20px;
+
+            width: 100%;
+            box-sizing: border-box; /*чтобы не выступало -убирает padding , margin
+*/
+         /*анимация отменяет св-во bottom: */
+            -webkit-transition:bottom 0.1s linear;
+            -moz-transition:bottom 0.1s linear;
+            -o-transition:bottom 0.1s linear;
+            transition:bottom 0.1s linear;
+         }
+
+         article>h2 {
+            font-size: 1.75em;   /*1em = 16px => 28px = 1.75em*/
+            text-transform: uppercase;
+            font-weight: 600;
+            color:#4f4e4e;
+            margin: 0 0 40px 20px;
+         }
+         article>p {
+            margin: 0 0 20px 20px;
+         }
+         article .butt {
+            display: inline-block;
+            border: 2px solid #c2c2c2;
+            color: #c2c2c2;
+            padding: 7px 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            /*Анимация*/
+            -webkit-transition:all 0.5s linear;
+            -moz-transition:all 0.5s linear;
+            -o-transition:all 0.5s linear;
+            transition:all 0.5s linear;
+
+/*all -указывать какие сво-ва затрагивать -все св-ва
+0.1s    - время перехода (предпочтительно 0.1s)
+linear  - функция перехода*/
+         }
+         article .butt:hover {
+            color: #339933;
+            text-decoration: underline;
+            /*border: 2px solid #339933;*/
+            border-color: #339933;
+            /*Анимация*/
+            -webkit-transition:all 0.5s linear;
+            -moz-transition:all 0.5s linear;
+            -o-transition:all 0.5s linear;
+            transition:all 0.5s linear;
+
+         }
+
+</style>

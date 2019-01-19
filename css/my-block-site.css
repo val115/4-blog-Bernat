@@ -1,0 +1,245 @@
+@import url("my-fonts.css");
+
+html {
+   min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+
+/*article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+      display:block;
+}*/
+ul {
+   list-style: none;
+}
+img{
+   max-width:100%;
+}
+.clr{
+   clear:both;
+}
+.clearfix:after {       /*чтобы не происходило схлопавыния границ при float: left;right:  надо назначать этот класс */
+    clear: both;
+    content: "";
+    display: table;
+}
+/*===============*/
+body {
+   background: #f8f8f8;
+   /*background: transparent;*/
+   padding: 0;
+   margin: 0;
+   border: 0;
+   outline: 0;   /* обнуляем отступы и убираем бордюры */
+   vertical-align: baseline;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 100%;
+   min-height: 100%;
+
+}
+/*============================*/
+   .block-main1 {
+      background-color: #292929;
+   }
+   /*---------------------*/
+      .block1 {
+         overflow: hidden;
+         /*background: #00FF66;*/
+         max-width: 980px;
+         height: 130px;
+         margin: 0 auto;
+
+      }
+         .block1-1 {
+            /*background: #00FFFF;*/
+            float: left;
+         }
+            .block1-1 a {
+               display: inline-block;
+               background: url('../images/logo.jpg') no-repeat 0% 50%;
+               width: 100px;
+               height: 130px;
+            }
+
+         .block1-2 {
+            /*background: #FFFF99;*/
+            float: right;
+
+         }
+            .block1-2 .menu {
+               margin: 0 20px 0 0;
+            }
+            .block1-2 .menu li {
+               float: left;
+               padding: 0;
+
+           }
+               .block1-2 .menu li a {
+                  display: inline-block;
+                  text-align: center;
+                  text-decoration: none;
+                  font-size:16px;
+                  font-weight: bold;
+                  line-height:126px;   /*подобрал высоту, чтобы видеть бордер при наведении*/
+                  color: #fff;
+                  padding: 0px 18px 0px 18px;
+               /*border-bottom: 4px solid #292929;*/*/
+               }
+               .menu li a:hover {
+                  color: #58c93a;
+                  border-bottom: 4px solid #58c93a;
+               }
+/*============================*/
+/*Делаем разделитель между header и content*/
+.delimiter {
+   background: #fffcdb;
+   height: 70px;
+   /*border-left: 1px solid #e1e0e0;*/
+}
+.delimiter .bord {
+   max-width: 980px;
+   height: 80px;
+   margin: 0 auto;
+   border: 1px solid #e1e0e0;
+}
+/*=================================*/
+   .block-main2 {
+      background: #fffcdb;
+
+   }
+   /*-----------------*/
+      .block2  {
+         /*background: #FFCCCC;*/
+         overflow: hidden;
+         max-width: 980px;
+         margin: 0 auto;
+         border: 1px solid #e1e0e0;
+         border-top: none;
+      }
+
+      /*========== block 2-1 ==============*/
+         .content {
+            /*background: #FF9966;*/
+            float: left;
+            width: 63.3%;  /*определяем ширину в % - 980 - 100% 620 -х */
+
+               /*для выравнивания колонок по высоте и заполнения всего блока*/
+            padding-bottom: 32000px;
+            margin-bottom: -32000px;
+         }
+
+            .content article {
+               margin-bottom: 80px;
+
+            }
+               article>header {
+                  font-size: 0;
+                  background: none;
+                  margin-bottom: 10px;
+               }
+                  article>h2 {
+                     font-size: 1.75em;   /*1em = 16px => 28px = 1.75em*/
+                     text-transform: uppercase;
+                     font-weight: 600;
+                     color:#4f4e4e;
+                     margin: 0 0 40px 20px;
+                  }
+                  article>p {
+                     margin: 0 0 20px 20px;
+                  }
+                  article .butt {
+                     display: inline-block;
+                     border: 2px solid #c2c2c2;
+                     color: #c2c2c2;
+                     padding: 7px 20px;
+                     text-decoration: none;
+                     border-radius: 50px;
+                  }
+                  article .butt:hover {
+                     color: #339933;
+                     /*border: 2px solid #339933;*/
+                     border-color: #339933;
+                  }
+
+
+      /*======== block 2-2=======================*/
+
+         .sidebar {
+            /*background: #Fccaaa;*/
+            float: right;
+            width: 28.6%;
+
+            /*для выравнивания колонок по высоте и заполнения всего блока*/
+            padding-bottom: 32000px;
+            margin-bottom: -32000px;
+         }
+/*-------------------------*/
+            .vidget  {
+               margin-bottom: 50px;
+            }
+               .vidget h2 {
+                  text-transform: uppercase;
+                  color: #6c6969;
+                  background: #f8f8f8;
+                  border-left: 3px solid #58c93e;
+                  padding: 10px 20px;
+                  font-weight: 600;
+                  margin-bottom: 20px;
+               }
+               .vidget .search {
+                  color: #b9b9b9;
+                  font-size: 0.75em;
+                  width: 100%;
+                  border: 1px solid #e1e0e0;
+                  padding: 18px 20px;
+               }
+               .vidget>nav {
+                  margin: 0 0 0 20px;
+               }
+               /*Позиционирование*/
+               .subscribe {
+                  position: relative;
+                  width: 100%;
+                  height: 48px;
+               }
+                  .vidget .sbcr-mail {
+                     color: #b9b9b9;
+                     font-size: 0.75em;
+                     width: 100%;
+                     box-sizing: border-box;   /* это свойство учитывает margin, padding, border- в ширене бокса */
+                     border: 1px solid #e1e0e0;
+                     padding: 15px 50px 15px 20px;
+
+                     position: absolute;
+                     top: 0;
+                     left: 0;
+                  }
+                  /*---------------*/
+                  .vidget .sbcr-btn {
+                     position: absolute;
+                     top: 12px;
+                     right: 20px;
+                  }
+/*=============== end block 2-2 =====================*/
+
+/*box-sizing: border-box;*/   /* Не нужно задавоть для блока дополнительные свойства - это свойство учитывает margin, padding, border- в ширене бокса  не*/
+===================== Block 3 ====================
+
+   footer {    /*почему не работает?*/
+      display: inline-block;
+      background: #FFFF00;
+      margin-bottom: 50px;
+   }
+      .main-content {
+      /*background: #f8f8f8;*/
+      height: 316px;
+         font-size: 0.813em;
+         text-align: center;
+         max-width: 980px;
+         margin: 0 auto;
+         /*margin-bottom: 30px;*/
+         border: 1px solid #e1e0e0;
+         border-top: none;
+      }
+      footer img {
+         margin : 80px 0 30px 0;
+      }
+

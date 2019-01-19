@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "hv";
+    src: url("../fonts/HV.woff2") format("woff2"), url("../fonts/HV.woff") format("woff");
+}
+
+@font-face {
+    font-family: "hvb";
+    src: url("../fonts/HVB.woff2") format("woff2"), url("../fonts/HVB.woff") format("woff");
+}
+
+@font-face {
+    font-family: "hvr";
+    src: url("../fonts/HVR.woff2") format("woff2"), url("../fonts/HVR.woff") format("woff");
+}
+
+@font-face {
+    font-family: "bn";
+    src: url("../fonts/BN.woff2") format("woff2"), url("../fonts/BN.woff") format("woff");
+}
+
+/*=====================*/
+/*Подключение шрифта через goole*/
+@font-face {
+   font-family: 'Open Sans', sans-serif;
+   src:url("https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet");
+}
+
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+   src:url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet");
+}
